@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+  body {
+    background: linear-gradient(to right, pink, purple);
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .title {
+    font-size: 64px;
+    color: white;
+    text-shadow: 2px 2px black;
+    margin-top: 100px;
+  }
+  .subtitle {
+    font-size: 32px;
+    color: white;
+    text-shadow: 1px 1px black;
+    margin-bottom: 50px;
+  }
+  .button {
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background: white;
+    color: purple;
+    font-size: 24px;
+    cursor: pointer;
+  }
+</style>
+<script>
+  function showAnswer(answer) {
+    var result = document.getElementById("result");
+    if (answer == "yes") {
+      result.innerHTML = "Yay! I'm so happy! You made my day! 💖";
+      result.style.color = "pink";
+      result.style.fontSize = "48px";
+      result.style.fontWeight = "bold";
+      result.style.animation = "pulse 1s infinite";
+    } else {
+      result.innerHTML = "Oh... THATS NOT A CHOICE GO PRESS YES";
+      result.style.color = "gray";
+      result.style.fontSize = "32px";
+      result.style.fontWeight = "normal";
+      result.style.animation = "none";
+    }
+  }
+</script>
+</head>
+<body>
+<div class="container">
+<h1 class="title">Salma, will you marry me?</h1>
+<h2 class="subtitle">You are the love of my life and I can't imagine living without you.</h2>
+<button class="button" onclick="showAnswer('yes')">Yes, of course!</button>
+<button class="button" onclick="showAnswer('no')">No, thank you.</button>
+<p id="result"></p>
+</div>
+</body>
+</html>
